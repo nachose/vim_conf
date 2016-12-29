@@ -1,0 +1,25 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2871
+
+FindMate provides a convenient way (at least for me) to quickly find the
+files you want. It uses the locate and file commands to achieve its goal
+(vimgrep on windows). 
+
+Originality it was released by Manuel Aguilar and Victor Guardiola but since I
+couldn't reach neither of them I decide to upload it by myself (and add some
+documentation) because I consider that this script could help someone else.
+
+The original script can be still found at
+
+http://snipt.net/voyeg3r/findmate-plugin-for-vim/
+
+You can launch FindMate by typing:
+
+    ,, File_name (two commas)
+
+Or
+
+    :FindMate File_name
+
+The shortcut can be redefined by using:
+
+    map your_shortcut   <Plug>FindMate

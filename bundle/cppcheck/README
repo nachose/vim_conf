@@ -1,0 +1,5 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3017
+
+Compiler definition to  use cppcheck static code checker from vim.
+
+Use :comp cppcheck to enable it, then use :make to call it.
