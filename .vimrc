@@ -126,7 +126,7 @@ nnoremap <silent> <F7> :NERDTreeToggle C:\workcopy<CR>
 noremap <F8> : mksession! /home/jose-seco/dev/nacho_vim_session<CR> 
 noremap <F9> : source     /home/jose-seco/dev/nacho_vim_session<CR>
 
-set backupdir =C:\temp
+"set backupdir =C:\temp
 set noswapfile   "no generar archivos de swap. Si se va la luz me quedo sin los cambios, pero es menos molesto.
 set autowrite    "salva el archivo actual al cambiar de buffer.
 
@@ -294,6 +294,10 @@ let g:syntastic_cpp_gcc_args = "-Wmissing-include-dirs -std=c++14"
 
 "Show errors for all checkers.
 let g:syntastic_aggregate_errors = 1
+
+let g:syntastic_python_pylint_args = "--rcfile=~/.vim/pylint.rc"
+"enable pylint for python"
+let g:syntastic_python_checkers = ['pylint']
 
 
 let g:Tlist_Ctags_Cmd = 'c:\workcopy\utils\ctags.exe'
