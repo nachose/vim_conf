@@ -43,6 +43,8 @@ set expandtab            "tabs are filled with spaces
 set langmenu    =es_es.utf8
 set encoding    =utf-8   "file encoding
 set cindent              "indentation c style
+set cinkeys-=0#          "Following two lines are for python, so that it doesn't place it in the first column
+set indentkeys-=0#
 set showmatch            "show matching parenthesis.
 set showcmd              "show partial commands"
 set showmode             "show current mode.
@@ -51,6 +53,7 @@ set nobackup             "do not backup files.
 "Read .cpp when opening .h and also the contrary
 "au BufRead,BufNewFile *.h exe "bel vsplit" fnameescape(expand("<amatch>:r").".cpp")
 "au BufRead,BufNewFile *.cpp exe "vsplit" fnameescape(expand("<amatch>:r").".h")
+au CursorHold * checktime
 
 set backspace=indent,start,eol   "indent ->allows to delete indents
 "eol    ->allows to delete line breaks.
@@ -351,3 +354,6 @@ let g:ctrlp_cmd = 'CtrlP'
 :set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 "You complete me pluging
+
+"Ag plugin "
+let g:ackprg = 'ag --nogroup --nocolor --column'
