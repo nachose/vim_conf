@@ -49,6 +49,7 @@ set showmatch            "show matching parenthesis.
 set showcmd              "show partial commands"
 set showmode             "show current mode.
 set nobackup             "do not backup files.
+set hlsearch             "highlight search"
 
 "Read .cpp when opening .h and also the contrary
 "au BufRead,BufNewFile *.h exe "bel vsplit" fnameescape(expand("<amatch>:r").".cpp")
@@ -65,7 +66,7 @@ set shortmess+=T "No hace falta pulsar <Enter> cuando hay un error.
 "colorscheme torte        "color scheme.
 "colorscheme DarkBlue
 "set guifont=Consolas:h14:b:cANSI
-set guifont=Monospace\ Bold:h14:b:cANSI
+"set guifont=Monospace\ Bold:h14:b:cANSI
 
 
 
@@ -143,6 +144,8 @@ set sessionoptions-=localoptions
 autocmd BufRead *.qs set syntax=javascript         "Si se lee un qs la sintaxis es javascript. 
 autocmd BufRead *.vim set syntax=vim
 autocmd BufRead *.sh set syntax=sh
+au BufRead *.html set filetype=htmlm4  "Syntax of html + javascript
+au BufRead *.gsp set filetype=htmlm4  "Syntax of html + javascript
 
 
 "****************** Configuring a.vim **********************"
@@ -344,6 +347,26 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
 
 "CtrlP Configuration
 
