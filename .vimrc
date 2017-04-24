@@ -389,4 +389,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 nnoremap yss<%-- <leader>mmm
 
 "Map to show words like this in this file and jump to one of them
-nnoremap <F4> [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
+nnoremap [I [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
+
+"Map MRU to the same command but not in caps.
+nnoremap :mru<CR> :MRU<CR>
