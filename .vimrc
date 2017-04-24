@@ -387,3 +387,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 "Surround by tags of comments.
 nnoremap yss<%-- <leader>mmm
+
+"Map to show words like this in this file and jump to one of them
+nnoremap <F4> [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
