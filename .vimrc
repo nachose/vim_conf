@@ -348,6 +348,10 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+"Deactivate the plugin for now.
+":RaibowParenthesesActivate<CR>
+":RainbowParenthesesToggle<CR>
+
 
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -380,3 +384,6 @@ let g:ctrlp_cmd = 'CtrlP'
 
 "Ag plugin "
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+"Surround by tags of comments.
+nnoremap yss<%-- <leader>mmm
