@@ -123,7 +123,8 @@ inoremap <c-tab> <c-r>=CompleteTab()<cr>
 
 nnoremap <silent> <F6> :TlistToggle<CR>
 
-nnoremap <silent> <F7> :NERDTreeToggle C:\workcopy<CR>
+nnoremap <silent> <F7> :NERDTreeToggle /home/jose-seco/workspace/product-inspire/<CR>
+:NERDTreeToggle<CR>
 
 "Mapas de distintas teclas
 
@@ -145,7 +146,7 @@ autocmd BufRead *.qs set syntax=javascript         "Si se lee un qs la sintaxis 
 autocmd BufRead *.vim set syntax=vim
 autocmd BufRead *.sh set syntax=sh
 au BufRead *.html set filetype=htmlm4  "Syntax of html + javascript
-au BufRead *.gsp set filetype=htmlm4  "Syntax of html + javascript
+"au BufRead *.gsp set filetype=htmlm4  "Syntax of html + javascript
 
 
 "****************** Configuring a.vim **********************"
@@ -158,8 +159,8 @@ autocmd FileChangedShell *
       \ echo "File has been changed outside of vim." |
       \ echohl None
 
-nnoremap <C-Tab> gt<CR>
-nnoremap <S-C-Tab> gT<CR>
+"nnoremap <C-Tab> gt<CR>
+"nnoremap <S-C-Tab> gT<CR>
 noremap <C-right> <ESC>gt<CR>
 noremap <C-left>  <ESC>gT<CR>
 nnoremap <C-n> :tabe<CR>
@@ -290,7 +291,6 @@ let g:syntastic_cpp_no_default_include_dirs = 1
 "Delete include errors.
 let g:syntastic_cpp_remove_include_errors = 1
 "Set syntastic checkers.
-"let g:syntastic_cpp_checkers = ['cppcheck', 'cpplint', 'clang-tidy', 'clang-check', 'gcc']
 let g:syntastic_cpp_checkers = ['cppcheck', 'cpplint', 'clang-tidy', 'clang-check','gcc' ]
 
 "Args for cpplint here.
@@ -306,7 +306,7 @@ let g:syntastic_python_pylint_args = "--rcfile=~/.vim/pylint.rc"
 let g:syntastic_python_checkers = ['pylint']
 
 
-let g:Tlist_Ctags_Cmd = 'c:\workcopy\utils\ctags.exe'
+let g:Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let g:Tlist_WinWidth = 50
 
 "Autocomplete menu colors.
@@ -386,10 +386,17 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 "Surround by tags of comments.
-nnoremap yss<%-- <leader>mmm
+"nnoremap yss<%-- <leader>mmm
 
 "Map to show words like this in this file and jump to one of them
 nnoremap [I [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
 "Map MRU to the same command but not in caps.
 nnoremap :mru<CR> :MRU<CR>
+
+"Tabular plugin is loaded
+let g:tabular_loaded = 1
+
+"Make tabularize be invoked by Tab
+:command Tab Tabularize<CR>
+
