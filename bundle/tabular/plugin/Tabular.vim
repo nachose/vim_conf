@@ -55,7 +55,7 @@ set cpo&vim
 " Private Things                                                          {{{1
 
 " Dictionary of command name to command
-let s:TabularCommands = {}
+let s:TabularCommands = {'Tab':'Tabularize'}
 
 " Generate tab completion list for :Tabularize                            {{{2
 " Return a list of commands that match the command line typed so far.
